@@ -87,7 +87,7 @@ result = ((year % 4 === 0 && year % 100 > 0) || year % 400 === 0) ?
 let tarelki = prompt("введите количество тарелок");
 let sredstvo = prompt("введите количество моющего средства");
 
-while (tarelki > 0 && sredstvo > 0){
+while (tarelki > 0 && sredstvo >= 0.5){
     sredstvo -= 0.5;
     console.log(sredstvo);
     tarelki -= 1;
@@ -97,6 +97,6 @@ if (tarelki === 0){
     console.log ("осталось средства: " + sredstvo);
 }
 
-if (sredstvo === 0){
+if (sredstvo < 0.5){
     console.log ("осталось тарелок: " + tarelki);
 }
